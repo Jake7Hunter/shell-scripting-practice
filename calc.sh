@@ -1,3 +1,7 @@
+echo "Hello, User!"
+
+
+
 #! /usr/bin/env bash
 
 # When the program is first loaded, display a greeting to the user.
