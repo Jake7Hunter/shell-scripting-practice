@@ -10,17 +10,23 @@ echo "1. Add"
 echo "2. Subract"
 echo "3. Multiply"
 echo "4. Divide"
+echo "5. Exit"
 
 read CHOICE
 
-if [[ $CHOICE -gt 4 ]]; then
-echo "Unknown prompt. Please try again"
+if [[ $CHOICE -gt 5 ]]; then
+echo "Unknown prompt."
 exit
 fi
 
-echo "please enter the first number"
+if [[ $CHOICE == 5 ]]; then
+echo "Goodbye," $NAME"!"
+exit
+fi
+
+echo "Please enter the first number"
 read N1
-echo "please enter the second number"
+echo "Please enter the second number"
 read N2
 
 case $CHOICE in
@@ -42,10 +48,7 @@ echo "The answer is:" $TOTAL
 "4")
 let TOTAL=$N1/$N2
 echo "The answer is:" $TOTAL
-;;
-
-*)
-echo "Unknown prompt. Please try again" 
+;; 
 
 esac
 
