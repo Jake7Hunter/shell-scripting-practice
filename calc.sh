@@ -1,5 +1,26 @@
-echo "Hello, User!"
+echo "Hello, please enter your name!"
+read NAME
+echo "Nice to meet you and welcome to the calculator, $NAME!"
 
+echo "what would you like to do?"
+echo "1. add"
+echo "2. subract"
+echo "3. multiply"
+echo "4. divide"
+
+read CHOICE
+
+echo "please enter the first number"
+read N1
+echo "please enter the second number"
+read N2
+
+case $CHOICE in
+ "1")
+let TOTAL=$N1+$N2
+echo "The answer is:" $TOTAL
+;;
+esac
 
 
 #! /usr/bin/env bash
