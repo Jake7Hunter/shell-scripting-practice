@@ -16,10 +16,29 @@ echo "please enter the second number"
 read N2
 
 case $CHOICE in
- "1")
+"1")
 let TOTAL=$N1+$N2
 echo "The answer is:" $TOTAL
 ;;
+
+"2")
+let TOTAL=$N1-$N2
+echo "The answer is:" $TOTAL
+;;
+
+"3")
+let TOTAL=$N1"*"$N2
+echo "The answer is:" $TOTAL
+;;
+
+"4")
+let TOTAL=$N1/$N2
+echo "The answer is:" $TOTAL
+;;
+
+*)
+echo "Unknown prompt. Please try again" 
+
 esac
 
 
